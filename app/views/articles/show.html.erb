@@ -1,0 +1,15 @@
+<div class="container">
+<h1><%= @article.title %></h1>
+<p><%= @article.content %></p>
+
+<!--
+<p><%= link_to "Edit this article", edit_article_path(@article) %></p>
+-->
+
+<p><%= link_to '<i class="fas fa-pencil-alt"></i>'.html_safe, edit_article_path(@article) %></p>
+
+<p><%= link_to "Delete", article_path(@article),
+      method: :delete,
+      data: { confirm: "Are you sure?" } %>
+</p>
+</div>
